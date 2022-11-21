@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>WareHouse:</h1>
+<p>{{warehouse}}</p>
+
+<br/><br/>
+
+{% if products %}
+ <h2>List of Products</h2>
+ <ul>
+ {% for product in products %}
+ <li> {{ product.name}} </li>
+ {% endfor %}
+ </ul>
+ {% else %}
+ <strong>There are no available products!</strong>
+ {% endif %}
+
+
+<br/>
+
+<p><a href="/myapp/">Return to Main page?</a></p>
+
+</body>
+</html>

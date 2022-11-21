@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+   Welcome Krishna!
+{% endblock %}
+
+
+{% block body_block %}
+
+    <h3 class="cent"> {{ last_login }}</h3>
+     {% if cat_list %}
+ <h2>List of Categories</h2>
+ <ul>
+ {% for cat in cat_list %}
+ <li> {{ cat.name}} </li>
+ {% endfor %}
+ </ul>
+ {% else %}
+ <strong>There are no available categories!</strong>
+ {% endif %}
+
+{% endblock %}

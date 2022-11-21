@@ -1,0 +1,44 @@
+[
+  {
+    "model": "myapp.Client",
+    "id": 1,
+    "fields": {
+    "password": "john",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "john",
+    "first_name": "JohnSamp",
+    "last_name": "Smith",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-17T01:37:45Z",
+    "user_ptr_id": 2,
+    "company": "Uwin",
+    "shipping_address": "123 University Avenue",
+    "city": "Windsor",
+    "province": "ON",
+    "profile_picture": "profile_pictures/default_profile_picture.jpeg"}
+  },
+  {
+     "model": "myapp.Client",
+    "id": 3,
+    "fields": {
+    "password": "mary",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "maryyooo",
+    "first_name": "Mary",
+    "last_name": "Hall",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-17T01:49:03Z",
+    "user_ptr_id": 3,
+    "company": "uwin",
+    "shipping_address": "456 Sunset Avenue",
+    "city": "Windsor",
+    "province": "ON",
+    "profile_picture": "profile_pictures/default_profile_picture.jpeg"}
+  }
+]

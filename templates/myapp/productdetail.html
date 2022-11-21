@@ -1,0 +1,23 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+<p>{{ prod.name }} Product</p>
+<ul>
+    <li>{{ prod.interested }} is/are interested</li>
+    <li>{{ prod.price }} is the Price for this Product</li>
+<br>
+    {% if prod.for_everyone == False %}
+        <li>This product is not available for everyone</li>
+    {% endif %}
+</ul>
+<p>
+    <form method="post" action="">
+    {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+
+        </table>
+    <input type="submit" value="Show Interest"/>
+    </form>
+</p>
+    <li class="hbar1"><a href="{% url 'techavant:index' %}place_order">Click here to place order</a><br /></li>
+{% endblock %}

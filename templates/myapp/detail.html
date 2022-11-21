@@ -1,0 +1,28 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+   Welcome Krishna!
+{% endblock %}
+
+{% block body_block %}
+
+<h1>WareHouse:</h1>
+<p>{{warehouse}}</p>
+
+<br/><br/>
+
+{% if products %}
+ <h2>List of Products</h2>
+ <ul>
+ {% for product in products %}
+ <li> {{ product.name}} </li>
+ {% endfor %}
+ </ul>
+ {% else %}
+ <strong>There are no available products!</strong>
+ {% endif %}
+
+
+<br/>
+
+
+{% endblock %}

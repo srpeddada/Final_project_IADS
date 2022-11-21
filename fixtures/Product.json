@@ -1,0 +1,26 @@
+[
+  {
+    "model": "myapp.Product",
+    "id": 1,
+    "fields": {
+    "category_id": 4,
+    "name": "ClockSitha",
+    "price": "99.99",
+    "stock": 100,
+    "available": true,
+    "description": null,
+    "interested": 1
+  }},
+  {
+    "model": "myapp.Product",
+    "id": 2,
+    "fields": {
+    "category_id": 4,
+    "name": "Vase",
+    "price": "82.54",
+    "stock": 100,
+    "available": true,
+    "description": null,
+    "interested": 0
+  }}
+]

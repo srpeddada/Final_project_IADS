@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+    My Orders
+{% endblock %}
+{% block body_block %}
+    {% if error_message %}
+        <h2>{{error_message}}</h2>
+
+    {% else %}
+        <h2 align="center">{{request.user.first_name}}'s orders: </h2>
+            <div class="row">
+                    {% if orders %}
+
+                    {% for order in orders %}
+
+                        <div class="col-md-4">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                  Order: {{order.pk}}
+                                </div>
+                                <div class="card-body">
+                                  <h5 class="card-title">{{order.product.name}}</h5>
+                                  <p class="card-text">{{order.status_date}}</p>
+                                  <p class="card-text">Price: ${{order.product.price}}</p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Order Status: {{order.get_order_status_verbose}}
+                                </div>
+                              </div>
+                        </div>
+
+                    {% endfor %}
+                    {% else %}
+                    <h3 align="center">You have not placed any order</h3>
+                    {% endif %}
+
+            </div>
+    {% endif %}
+{% endblock %}
